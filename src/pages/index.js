@@ -1,16 +1,29 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/ContactForm"
+import { makeStyles } from "@material-ui/core/styles"
 
-const IndexPage = () => (
-  <Layout>
+const useStyles = makeStyles(theme => ({
+  root: {
+    width: "100%",
+    "& > * + *": {
+      marginTop: theme.spacing(2),
+    },
+  },
+}))
+
+const IndexPage = () => {
+  const classes = useStyles();
+  return (
+    <Layout>
     <SEO title="Home" />
-    <ContactForm/>
+    <div className={classes.root}>
+      {" "}
+      <ContactForm />
+    </div>
   </Layout>
-)
+  )
+}
 
 export default IndexPage
