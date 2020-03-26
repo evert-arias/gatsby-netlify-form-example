@@ -1,5 +1,7 @@
 import React from "react"
-import { navigate } from 'gatsby-link';
+import { navigate } from "gatsby-link"
+import Button from "@material-ui/core/Button"
+import TextField from "@material-ui/core/TextField"
 
 function encode(data) {
   return Object.keys(data)
@@ -25,14 +27,14 @@ const ContactForm = () => {
         ...state,
       }),
     })
-      .then(() =>  navigate(form.getAttribute('action')))
+      .then(() => navigate(form.getAttribute("action")))
       .catch(error => alert(error))
   }
   return (
     <div>
-      <h1>Contact Me</h1>
+      <h1>Contact Form</h1>
       <form
-        name="contact"
+        name="Contact Form"
         method="post"
         action="/thanks/"
         data-netlify="true"
@@ -48,28 +50,35 @@ const ContactForm = () => {
           </label>
         </p>
         <p>
-          <label>
-            Your name:
-            <br />
-            <input type="text" name="name" onChange={handleChange} />
-          </label>
+          <TextField
+            label="Name"
+            id="name"
+            type="text"
+            name="name"
+            onChange={handleChange}
+          />
         </p>
         <p>
-          <label>
-            Your email:
-            <br />
-            <input type="email" name="email" onChange={handleChange} />
-          </label>
+          <TextField
+            id="email"
+            label="Email"
+            type="email"
+            name="email"
+            onChange={handleChange}
+          />
         </p>
         <p>
-          <label>
-            Message:
-            <br />
-            <textarea name="message" onChange={handleChange} />
-          </label>
+          <TextField
+            id="message"
+            label="Message"
+            name="message"
+            onChange={handleChange}
+          />
         </p>
         <p>
-          <button type="submit">Send</button>
+          <Button variant="contained" color="primary" type="submit">
+            Submit
+          </Button>
         </p>
       </form>
     </div>
