@@ -1,10 +1,12 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-netlify-form-example",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Gatsby Netlify Form Example",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Evert Arias <evert.arias@hotmail.com>",
   "dependencies": {
+    "@material-ui/core": "^4.9.7",
+    "@material-ui/lab": "^4.0.0-alpha.46",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
     "gatsby-link": "^2.3.1",
@@ -32,14 +34,13 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/evert-arias/gatsby-netlify-form-example"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/evert-arias/gatsby-netlify-form-example/issues"
   }
 }
