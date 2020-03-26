@@ -1,4 +1,5 @@
 import React from "react"
+import { navigate } from 'gatsby-link';
 
 function encode(data) {
   return Object.keys(data)
@@ -24,7 +25,7 @@ const ContactForm = () => {
         ...state,
       }),
     })
-      .then(() => console.log("navigate"))
+      .then(() =>  navigate(form.getAttribute('action')))
       .catch(error => alert(error))
   }
   return (
